@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container {
+  width: 95%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border: solid blue;
+  gap: 10px;
+}
+
+.grid-item {
+  height: 20rem; /* Ajuste conforme necessário */
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 300px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item {
+    height: 10rem; /* Ajuste conforme necessário */
+  }
+}
